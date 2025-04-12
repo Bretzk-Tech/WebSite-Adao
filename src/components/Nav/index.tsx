@@ -1,46 +1,68 @@
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import { FiMenu, FiX } from 'react-icons/fi' // Ícones do menu
 
 const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  border-bottom: 1px solid #ccc;
+  padding: 18px 24px;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  font-family: 'Segoe UI', sans-serif;
 `
 
 const Logo = styled.div`
   display: flex;
   align-items: center;
 
-  img {
-    height: 40px;
-    margin-right: 10px;
-  }
-
   span {
-    font-size: 14px;
-    color: #333;
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
   }
 `
 
-const NavLinks = styled.ul`
+const MenuToggle = styled.div`
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`
+
+interface NavLinksProps {
+  isOpen: boolean
+}
+
+const NavLinks = styled.ul<NavLinksProps>`
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
 
   li {
-    margin-left: 20px;
+    margin-left: 28px;
 
     a {
       text-decoration: none;
-      color: #000;
+      color: #333;
       font-size: 16px;
+      font-weight: 500;
+      padding: 6px 0;
       position: relative;
+      transition: 0.3s ease;
 
       &.active {
-        font-weight: bold;
-        text-decoration: underline;
+        color: #007bff;
+        font-weight: 600;
+        border-bottom: 2px solid #007bff;
       }
 
       &:hover {
@@ -48,28 +70,47 @@ const NavLinks = styled.ul`
       }
     }
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    box-shadow: -2px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 8px 8px;
+    display: ${props => (props.isOpen ? 'flex' : 'none')};
+  }
 `
 
 export default function Nav() {
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen)
+  }
+
   return (
     <NavContainer>
       <Logo>
-        <span>Ticino Comercial Ltda.</span>
+        {/* <img src="/logo.png" alt="Logo" /> */}
+        <span>Combustão Industrial</span>
       </Logo>
-      <NavLinks>
+
+      <MenuToggle onClick={toggleMenu}>
+        {menuOpen ? <FiX /> : <FiMenu />}
+      </MenuToggle>
+
+      <NavLinks isOpen={menuOpen}>
         <li>
           <a href='/' className='active'>
             Home
           </a>
         </li>
         <li>
-          <a href='/services'>Services</a>
-        </li>
-        <li>
-          <a href='/about'>About Us</a>
-        </li>
-        <li>
-          <a href='/contact'>Contact</a>
+          <a href='/products'>Produtos</a>
         </li>
       </NavLinks>
     </NavContainer>
