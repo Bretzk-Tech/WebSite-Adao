@@ -2,7 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 
 const HeaderSection = styled.header`
-  background: linear-gradient(to bottom, #1f1f1f, #0e1e2d);
+  background: linear-gradient(
+    to bottom,
+    #2c3e50,
+    #34495e
+  ); // Gradiente azul petróleo e cinza azulado
   color: white;
   padding: 40px 20px;
   text-align: center;
@@ -26,7 +30,7 @@ const Title = styled.h1`
 
 const ProductGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(5, minmax(160px, 1fr));
   gap: 20px;
   justify-items: center;
   max-width: 1200px;
@@ -63,7 +67,7 @@ const CTAText = styled.p`
 
 const CTAButton = styled.a`
   display: inline-block;
-  background: #ff4f1f;
+  background: #e74c3c; // Vermelho suave
   color: white;
   padding: 12px 30px;
   border-radius: 8px;
@@ -72,7 +76,7 @@ const CTAButton = styled.a`
   transition: background 0.3s ease;
 
   &:hover {
-    background: #e34416;
+    background: #c0392b; // Vermelho mais escuro para hover
   }
 `
 

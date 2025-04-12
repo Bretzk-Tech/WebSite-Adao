@@ -2,11 +2,11 @@ import { DefaultTheme } from 'styled-components'
 
 const theme: DefaultTheme = {
   colors: {
-    primary: '#4db2f7',
-    secondary: '#ff4f1f',
-    background: '#f8f9fa',
-    text: '#333',
-    mutedText: '#6c757d',
+    primary: '#2c3e50', // Azul petróleo
+    secondary: '#ecf0f1', // Cinza muito claro
+    background: '#ffffff', // Branco
+    text: '#34495e', // Cinza azulado
+    mutedText: '#7f8c8d', // Cinza suave
     white: '#ffffff'
   },
   typography: {

@@ -8,6 +8,8 @@ import Sobre from '../../components/Sobre'
 
 const HomeContainer = styled.div`
   text-align: center;
+  padding: 0;
+  margin: 0;
 
   h1 {
     font-size: 2rem;
@@ -24,9 +26,9 @@ export default function Home() {
   return (
     <HomeContainer>
       <Nav />
-      <Header />  
-      <Diferenciais />
+      <Header />
       <Sobre />
+      <Diferenciais />
       <Contact />
       <Footer />
     </HomeContainer>

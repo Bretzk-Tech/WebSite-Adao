@@ -7,8 +7,8 @@ const NavContainer = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 18px 24px;
-  background-color: #fff;
-  border-bottom: 1px solid #e5e5e5;
+  background-color: #ffffff; // Fundo branco
+  border-bottom: 1px solid #ecf0f1; // Borda cinza muito claro
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
   position: sticky;
   top: 0;
@@ -52,7 +52,7 @@ const NavLinks = styled.ul<NavLinksProps>`
 
     a {
       text-decoration: none;
-      color: #333;
+      color: #34495e; // Texto cinza azulado
       font-size: 16px;
       font-weight: 500;
       padding: 6px 0;
@@ -60,13 +60,13 @@ const NavLinks = styled.ul<NavLinksProps>`
       transition: 0.3s ease;
 
       &.active {
-        color: #007bff;
+        color: #2c3e50; // Azul petróleo para link ativo
         font-weight: 600;
-        border-bottom: 2px solid #007bff;
+        border-bottom: 2px solid #2c3e50;
       }
 
       &:hover {
-        color: #007bff;
+        color: #e74c3c; // Vermelho suave para hover
       }
     }
   }

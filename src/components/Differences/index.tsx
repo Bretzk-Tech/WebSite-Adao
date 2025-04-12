@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.section`
-  background-color: #4db2f7;
+  background-color: #2c3e50; // Azul petróleo
   color: white;
   text-align: center;
   padding: 60px 20px;
@@ -11,6 +11,7 @@ const Container = styled.section`
 const Title = styled.h2`
   font-size: 2.5rem;
   margin-bottom: 60px;
+  color: #ecf0f1; // Cinza muito claro
 `
 
 const ItemsContainer = styled.div`
@@ -33,6 +34,7 @@ const Image = styled.img`
 const Text = styled.p`
   font-size: 1rem;
   line-height: 1.6;
+  color: white; 
 `
 
 const Diferenciais = () => {
