@@ -61,13 +61,14 @@ const CTATitle = styled.h2`
 
 const CTAText = styled.p`
   font-size: 1rem;
-  color: #ccc;
+  color: #ccc !important;
   margin-bottom: 20px;
 `
 
 const CTAButton = styled.a`
   display: inline-block;
-  background: #e74c3c; // Vermelho suave
+  background-color: #2c3e50;
+
   color: white;
   padding: 12px 30px;
   border-radius: 8px;
@@ -76,7 +77,7 @@ const CTAButton = styled.a`
   transition: background 0.3s ease;
 
   &:hover {
-    background: #c0392b; // Vermelho mais escuro para hover
+    background-color: #34495e;
   }
 `
 
@@ -96,8 +97,8 @@ const Header = () => {
 
   return (
     <HeaderSection>
-      <TopBar>(47) 9 2274-0929 - ticino@ticino.com.br</TopBar>
-      <Title>Soluções em Combustão Industrial</Title>
+      <TopBar>(47) 3378-5990 (47) 99147-1021 - adaocatherm@tarra.com.br</TopBar>
+      <Title>Soluções em Catherm</Title>
 
       <ProductGrid>
         {produtos.map((src, i) => (

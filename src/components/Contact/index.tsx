@@ -29,7 +29,6 @@ const FlexWrapper = styled.div`
 
 const FormWrapper = styled.div`
   width: 100%;
-  margin-bottom: 2rem;
 
   @media (min-width: 1024px) {
     width: 50%;
@@ -52,8 +51,9 @@ const Title = styled.h1`
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
   text-align: left;
+  max-width: 500px;
 `
 
 const Label = styled.label`
@@ -99,7 +99,7 @@ const Textarea = styled.textarea`
 
 const Button = styled.button`
   width: 100%;
-  background-color: #2c3e50; // Azul petróleo para botão
+  background-color: #2c3e50;
   color: white;
   padding: 0.75rem 1rem;
   border-radius: 0.375rem;
@@ -108,7 +108,7 @@ const Button = styled.button`
   transition: background-color 0.2s, transform 0.2s;
 
   &:hover {
-    background-color: #34495e; // Cinza azulado para hover
+    background-color: #34495e;
     transform: translateY(-2px);
   }
 
@@ -120,6 +120,8 @@ const Button = styled.button`
 
 const TextWrapper = styled.div`
   width: 100%;
+  padding-left: 2%;
+  border: 1px solid red;
 
   @media (min-width: 1024px) {
     width: 50%;
@@ -143,7 +145,7 @@ const WhatsAppButton = styled.a`
   position: fixed;
   bottom: 1rem;
   right: 1rem;
-  background-color: #e74c3c; // Vermelho suave para botão do WhatsApp
+  background-color: rgba(207, 207, 207, 0.63);
   color: white;
   border-radius: 50%;
   width: 3.5rem;
@@ -155,13 +157,13 @@ const WhatsAppButton = styled.a`
   transition: background-color 0.2s, transform 0.2s;
 
   &:hover {
-    background-color: #c0392b; // Vermelho mais escuro para hover
+    background-color: rgba(207, 207, 207, 0.42);
     transform: scale(1.1);
   }
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.5);
+    box-shadow: 0 0 0 3px rgba(86, 231, 60, 0.5);
   }
 
   &:hover::after {
@@ -320,8 +322,8 @@ const Contact = () => {
                 desempenho e produtividade!
               </Paragraph>
               <Image
-                src='https://placehold.co/300x100'
-                alt='Logo da Ticino Comercial Ltda. com texto em vermelho e azul'
+                src='src/assets/logo.png'
+                alt='Logo da Catherm Comercial Ltda. com texto em vermelho'
               />
             </TextWrapper>
           </FlexWrapper>

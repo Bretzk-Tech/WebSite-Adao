@@ -20,6 +20,12 @@ const Logo = styled.div`
   display: flex;
   align-items: center;
 
+  img {
+    width: 40px;
+    height: 50px;
+    margin-right: 10px;
+  }
+
   span {
     font-size: 20px;
     font-weight: 700;
@@ -106,8 +112,8 @@ export default function Nav() {
     <NavContainer>
       <Center>
         <Logo>
-          {/* <img src="/logo.png" alt="Logo" /> */}
-          <span>Combustão Industrial</span>
+          <img src='src/assets/logo.png' alt='Logo' />
+          <span>Catherm</span>
         </Logo>
 
         <MenuToggle onClick={toggleMenu}>
