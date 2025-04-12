@@ -4,6 +4,7 @@ import Footer from '../../components/Footer'
 import Contact from '../../components/Contact'
 import Diferenciais from '../../components/Differences'
 import Header from '../../components/Header'
+import Sobre from '../../components/Sobre'
 
 const HomeContainer = styled.div`
   text-align: center;
@@ -23,8 +24,9 @@ export default function Home() {
   return (
     <HomeContainer>
       <Nav />
-      <Header />
+      <Header />  
       <Diferenciais />
+      <Sobre />
       <Contact />
       <Footer />
     </HomeContainer>

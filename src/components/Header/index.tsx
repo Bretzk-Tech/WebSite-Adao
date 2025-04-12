@@ -9,29 +9,33 @@ const HeaderSection = styled.header`
 `
 
 const TopBar = styled.div`
-  font-size: 0.9rem;
-  margin-bottom: 20px;
-  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: #b3b3b3;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 `
 
 const Title = styled.h1`
-  font-size: 2.8rem;
-  font-weight: bold;
-  margin-bottom: 40px;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #f5f5f5;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 `
 
 const ProductGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
   justify-items: center;
-  max-width: 1000px;
-  margin: 0 auto 50px auto;
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
 `
 
 const ProductImage = styled.img`
   width: 100%;
-  max-width: 140px;
+  max-width: 160px;
   height: auto;
   border-radius: 8px;
   background: white;
@@ -78,6 +82,7 @@ const Header = () => {
     '/src/assets/motor02.avif',
     '/src/assets/motor03.avif',
     '/src/assets/motor04.avif',
+    '/src/assets/motor05.avif',
     '/src/assets/motor06.avif',
     '/src/assets/motor07.avif',
     '/src/assets/motor08.avif',
@@ -87,7 +92,7 @@ const Header = () => {
 
   return (
     <HeaderSection>
-      <TopBar>(11) 2274 0929 - (11) 2274 6923 - ticino@ticino.com.br</TopBar>
+      <TopBar>(47) 9 2274-0929 - ticino@ticino.com.br</TopBar>
       <Title>Soluções em Combustão Industrial</Title>
 
       <ProductGrid>

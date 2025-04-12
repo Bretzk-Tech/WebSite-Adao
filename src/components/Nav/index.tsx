@@ -85,6 +85,16 @@ const NavLinks = styled.ul<NavLinksProps>`
   }
 `
 
+const Center = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+`
+
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -94,25 +104,27 @@ export default function Nav() {
 
   return (
     <NavContainer>
-      <Logo>
-        {/* <img src="/logo.png" alt="Logo" /> */}
-        <span>Combustão Industrial</span>
-      </Logo>
+      <Center>
+        <Logo>
+          {/* <img src="/logo.png" alt="Logo" /> */}
+          <span>Combustão Industrial</span>
+        </Logo>
 
-      <MenuToggle onClick={toggleMenu}>
-        {menuOpen ? <FiX /> : <FiMenu />}
-      </MenuToggle>
+        <MenuToggle onClick={toggleMenu}>
+          {menuOpen ? <FiX /> : <FiMenu />}
+        </MenuToggle>
 
-      <NavLinks isOpen={menuOpen}>
-        <li>
-          <a href='/' className='active'>
-            Home
-          </a>
-        </li>
-        <li>
-          <a href='/products'>Produtos</a>
-        </li>
-      </NavLinks>
+        <NavLinks isOpen={menuOpen}>
+          <li>
+            <a href='/' className='active'>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href='/products'>Produtos</a>
+          </li>
+        </NavLinks>
+      </Center>
     </NavContainer>
   )
 }
