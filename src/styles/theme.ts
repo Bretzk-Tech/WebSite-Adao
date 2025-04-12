@@ -7,7 +7,17 @@ const theme: DefaultTheme = {
     background: '#ffffff', // Branco
     text: '#34495e', // Cinza azulado
     mutedText: '#7f8c8d', // Cinza suave
-    white: '#ffffff'
+    white: '#ffffff',
+
+    // Segunda paleta possivel
+    
+    // primary: '#0056b3', // Azul corporativo
+    // secondary: '#ffc107', // Amarelo ouro
+    // background: '#f8f9fa', // Cinza claro
+    // text: '#212529', // Preto suave
+    // mutedText: '#6c757d', // Cinza suave
+    // white: '#ffffff',
+    // highlight: '#dc3545' // Vermelho intenso
   },
   typography: {
     fontFamily: "'Segoe UI', sans-serif",

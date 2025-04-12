@@ -184,6 +184,47 @@ const WhatsAppIcon = styled.img`
   height: 1.5rem;
 `
 
+const SocialMediaSection = styled.div`
+  text-align: center;
+  margin-bottom: 2rem;
+
+  p {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #2c3e50; // Azul petróleo
+    margin-bottom: 1rem;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+
+    a {
+      display: inline-block;
+      width: 3rem;
+      height: 3rem;
+      background-color: #ecf0f1; // Fundo cinza muito claro
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s, background-color 0.2s;
+
+      &:hover {
+        background-color: #bdc3c7; // Cinza mais escuro para hover
+        transform: scale(1.1);
+      }
+
+      img {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+  }
+`
+
 const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -194,71 +235,35 @@ const Contact = () => {
     <>
       <Container>
         <InnerContainer>
-          <p
-            style={{
-              textAlign: 'center',
-              color: '#2d3748',
-              fontSize: '1.125rem',
-              marginBottom: '1rem'
-            }}
-          >
-            Fale com nossos vendedores e solucione suas dúvidas!
-          </p>
-          <p
-            style={{
-              textAlign: 'center',
-              color: '#2d3748',
-              fontSize: '1.125rem',
-              marginBottom: '2rem'
-            }}
-          >
-            Siga Nossas Redes Sociais!
-          </p>
-          <div
-            style={{
-              display: 'flex',
-              gap: '1rem',
-              justifyContent: 'center',
-              marginBottom: '2rem'
-            }}
-          >
-            <a
-              href='https://www.instagram.com/YOUR_INSTAGRAM_HANDLE'
-              target='_blank'
-              rel='noopener noreferrer'
-              aria-label='Follow us on Instagram'
-            >
-              <img
-                src='https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png'
-                alt='Instagram Icon'
-                style={{ width: '2rem', height: '2rem' }}
-              />
-            </a>
-            <a
-              href='https://web.whatsapp.com/send?phone=YOUR_PHONE_NUMBER'
-              target='_blank'
-              rel='noopener noreferrer'
-              aria-label='Contact us on WhatsApp'
-            >
-              <img
-                src='https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg'
-                alt='WhatsApp Icon'
-                style={{ width: '2rem', height: '2rem' }}
-              />
-            </a>
-            <a
-              href='mailto:YOUR_EMAIL_ADDRESS'
-              target='_blank'
-              rel='noopener noreferrer'
-              aria-label='Send us an email'
-            >
-              <img
-                src='https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_Icon.png'
-                alt='Email Icon'
-                style={{ width: '2rem', height: '2rem' }}
-              />
-            </a>
-          </div>
+          <SocialMediaSection>
+            <p>
+              Conecte-se conosco nas redes sociais e acompanhe as novidades!
+            </p>
+            <div className='icons'>
+              <a
+                href='https://www.instagram.com/YOUR_INSTAGRAM_HANDLE'
+                target='_blank'
+                rel='noopener noreferrer'
+                aria-label='Follow us on Instagram'
+              >
+                <img
+                  src='https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png'
+                  alt='Instagram Icon'
+                />
+              </a>
+              <a
+                href='https://web.whatsapp.com/send?phone=YOUR_PHONE_NUMBER'
+                target='_blank'
+                rel='noopener noreferrer'
+                aria-label='Contact us on WhatsApp'
+              >
+                <img
+                  src='https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg'
+                  alt='WhatsApp Icon'
+                />
+              </a>
+            </div>
+          </SocialMediaSection>
           <FlexWrapper>
             <FormWrapper>
               <Title>Entre em Contato conosco!</Title>

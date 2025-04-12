@@ -1,4 +1,4 @@
-import React from 'react'
+// Removed unused React import
 import styled from 'styled-components'
 
 const Container = styled.section`
@@ -11,7 +11,7 @@ const Container = styled.section`
 const Title = styled.h2`
   font-size: 2.5rem;
   margin-bottom: 60px;
-  color: #ecf0f1; // Cinza muito claro
+  color: #ecf0f1;
 `
 
 const ItemsContainer = styled.div`
@@ -34,7 +34,7 @@ const Image = styled.img`
 const Text = styled.p`
   font-size: 1rem;
   line-height: 1.6;
-  color: white; 
+  color: white !important; 
 `
 
 const Diferenciais = () => {
