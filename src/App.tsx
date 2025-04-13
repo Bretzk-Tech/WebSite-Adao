@@ -2,7 +2,22 @@ import { BrowserRouter } from 'react-router-dom'
 import RoutesComponent from './routes'
 import './app.css'
 import Nav from './components/Nav'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+
+const pulseAnimation = keyframes`
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(86, 231, 60, 0.5);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(86, 231, 60, 0.5);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(86, 231, 60, 0.5);
+  }
+`
 
 const WhatsAppButton = styled.a`
   position: fixed;
@@ -18,6 +33,7 @@ const WhatsAppButton = styled.a`
   justify-content: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.2s, transform 0.2s;
+  animation: ${pulseAnimation} 2s infinite;
 
   &:hover {
     background-color: rgba(207, 207, 207, 0.42);
