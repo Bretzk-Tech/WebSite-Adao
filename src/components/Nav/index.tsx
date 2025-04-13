@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { FiMenu, FiX } from 'react-icons/fi' // Ícones do menu
+import { FiMenu, FiX } from 'react-icons/fi'
 
 const NavContainer = styled.nav`
   display: flex;
@@ -58,34 +58,30 @@ const NavLinks = styled.ul<NavLinksProps>`
 
     a {
       text-decoration: none;
-      color: #34495e; // Texto cinza azulado
+      color: #34495e;
       font-size: 16px;
       font-weight: 500;
       padding: 6px 0;
       position: relative;
-      transition: 0.3s ease;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
 
       &.active {
-        color: #2c3e50; // Azul petróleo para link ativo
+        color: #2c3e50;
         font-weight: 600;
         border-bottom: 2px solid #2c3e50;
-      }
-
-      &:hover {
-        color: #e74c3c; // Vermelho suave para hover
       }
     }
   }
 
   @media (max-width: 768px) {
     flex-direction: column;
-    background: #fff;
+    background: #ffffff; // Fundo branco consistente
     position: absolute;
     top: 70px;
     right: 0;
-    width: 200px;
+    width: 240px; // Largura ajustada para melhor visualização
     padding: 20px;
-    box-shadow: -2px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: -2px 4px 12px rgba(0, 0, 0, 0.15); // Sombra mais visível
     border-radius: 0 0 8px 8px;
     display: ${props => (props.isOpen ? 'flex' : 'none')};
   }
@@ -128,9 +124,15 @@ const ContactBar = styled.div`
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [activeLink, setActiveLink] = useState('/')
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen)
+  }
+
+  const handleLinkClick = (path: string) => {
+    setActiveLink(path)
+    setMenuOpen(false)
   }
 
   return (
@@ -165,12 +167,22 @@ export default function Nav() {
 
           <NavLinks isOpen={menuOpen}>
             <li>
-              <a href='/' className='active'>
+              <a
+                href='/'
+                className={activeLink === '/' ? 'active' : ''}
+                onClick={() => handleLinkClick('/')}
+              >
                 Home
               </a>
             </li>
             <li>
-              <a href='/products'>Produtos</a>
+              <a
+                href='/products'
+                className={activeLink === '/products' ? 'active' : ''}
+                onClick={() => handleLinkClick('/products')}
+              >
+                Produtos
+              </a>
             </li>
           </NavLinks>
         </Center>
