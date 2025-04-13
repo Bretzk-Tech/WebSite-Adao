@@ -2,13 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 
 const HeaderSection = styled.header`
-  background: linear-gradient(
-    to bottom,
-    #2c3e50,
-    #34495e
-  ); // Gradiente azul petróleo e cinza azulado
+  background: linear-gradient(to bottom, #2c3e50, #34495e);
   color: white;
-  padding: 40px 20px;
+  padding: 20px 20px;
   text-align: center;
 `
 
@@ -21,10 +17,10 @@ const TopBar = styled.div`
 `
 
 const Title = styled.h1`
-  font-size: 3rem;
+  font-size: 30px !important;
   font-weight: 700;
-  margin-bottom: 50px;
-  color: #f5f5f5;
+  margin-bottom: 50px !important;
+  color: #ecf0f1;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 `
 
@@ -97,8 +93,8 @@ const Header = () => {
 
   return (
     <HeaderSection>
-      <TopBar>(47) 3378-5990 (47) 99147-1021 - adaocatherm@tarra.com.br</TopBar>
-      <Title>Soluções em Catherm</Title>
+      {/* <TopBar>(47) 3378-5990 (47) 99147-1021 - adaocatherm@tarra.com.br</TopBar> */}
+      <Title>Peças de reposição para seu queimador industrial.</Title>
 
       <ProductGrid>
         {produtos.map((src, i) => (
@@ -108,13 +104,7 @@ const Header = () => {
 
       <CTABox>
         <CTATitle>Conheça nosso catálogo de peças!</CTATitle>
-        <CTAText>
-          Peças de reposição dos mais renomados fornecedores para seu queimador
-          industrial.
-          <br />
-          <br />
-          Entregamos em todo o Brasil!
-        </CTAText>
+        <CTAText>Entregamos em todo o Brasil!</CTAText>
         <CTAButton href='#produtos'>Ver Produtos</CTAButton>
       </CTABox>
     </HeaderSection>

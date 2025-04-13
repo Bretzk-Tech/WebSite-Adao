@@ -101,6 +101,31 @@ const Center = styled.div`
   padding: 0 20px;
 `
 
+const ContactBar = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1c40f; // Amarelo
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #000;
+
+  a {
+    text-decoration: none;
+    color: #000;
+    margin-left: 10px;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 10px;
+
+    a {
+      font-size: 18px;
+    }
+  }
+`
+
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -109,28 +134,47 @@ export default function Nav() {
   }
 
   return (
-    <NavContainer>
-      <Center>
-        <Logo>
-          <img src='src/assets/logo.png' alt='Logo' />
-          <span>Catherm</span>
-        </Logo>
-
-        <MenuToggle onClick={toggleMenu}>
-          {menuOpen ? <FiX /> : <FiMenu />}
-        </MenuToggle>
-
-        <NavLinks isOpen={menuOpen}>
-          <li>
-            <a href='/' className='active'>
-              Home
+    <>
+      <ContactBar>
+        <Center>
+          <div style={{ display: 'flex', gap: '10px' }}>
+            <span>📞 (47) 3378-5990</span>
+            <span>📱 (47) 99147-1021</span>
+            <a href='mailto:adaocatherm@tarra.com.br'>
+              ✉ adaocatherm@tarra.com.br
             </a>
-          </li>
-          <li>
-            <a href='/products'>Produtos</a>
-          </li>
-        </NavLinks>
-      </Center>
-    </NavContainer>
+          </div>
+          <div className='social-icons'>
+            <a href='#'>🔗 Facebook</a>
+            <a href='#'>🔗 Instagram</a>
+            <a href='#'>🔗 LinkedIn</a>
+            <a href='#'>🔗 YouTube</a>
+          </div>
+        </Center>
+      </ContactBar>
+      <NavContainer>
+        <Center>
+          <Logo>
+            <img src='src/assets/logo.png' alt='Logo' />
+            <span>Catherm</span>
+          </Logo>
+
+          <MenuToggle onClick={toggleMenu}>
+            {menuOpen ? <FiX /> : <FiMenu />}
+          </MenuToggle>
+
+          <NavLinks isOpen={menuOpen}>
+            <li>
+              <a href='/' className='active'>
+                Home
+              </a>
+            </li>
+            <li>
+              <a href='/products'>Produtos</a>
+            </li>
+          </NavLinks>
+        </Center>
+      </NavContainer>
+    </>
   )
 }
