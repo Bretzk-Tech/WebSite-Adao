@@ -93,7 +93,6 @@ const Header = () => {
 
   return (
     <HeaderSection>
-      {/* <TopBar>(47) 3378-5990 (47) 99147-1021 - adaocatherm@tarra.com.br</TopBar> */}
       <Title>Peças de reposição para seu queimador industrial.</Title>
 
       <ProductGrid>

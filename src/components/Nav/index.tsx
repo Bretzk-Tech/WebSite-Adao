@@ -117,7 +117,7 @@ const ContactBar = styled.div`
     gap: 10px;
 
     a {
-      font-size: 18px;
+      font-size: 15px;
     }
   }
 `
@@ -139,7 +139,7 @@ export default function Nav() {
     <>
       <ContactBar>
         <Center>
-          <div style={{ display: 'flex', gap: '10px' }}>
+          <div style={{ display: 'flex', gap: '10px', fontSize: '14px' }}>
             <span>📞 (47) 3378-5990</span>
             <span>📱 (47) 99147-1021</span>
             <a href='mailto:adaocatherm@tarra.com.br'>
