@@ -25,7 +25,6 @@ const HomeContainer = styled.div`
 export default function Home() {
   return (
     <HomeContainer>
-      <Nav />
       <Header />
       <Sobre />
       <Diferenciais />
