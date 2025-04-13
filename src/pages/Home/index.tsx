@@ -1,6 +1,4 @@
 import styled from 'styled-components'
-import Nav from '../../components/Nav'
-import Footer from '../../components/Footer'
 import Contact from '../../components/Contact'
 import Diferenciais from '../../components/Differences'
 import Header from '../../components/Header'
@@ -29,7 +27,6 @@ export default function Home() {
       <Sobre />
       <Diferenciais />
       <Contact />
-      <Footer />
     </HomeContainer>
   )
 }

@@ -120,8 +120,9 @@ const Button = styled.button`
 
 const TextWrapper = styled.div`
   width: 100%;
-  padding-left: 2%;
-  border: 1px solid red;
+  /* padding-left: 2%; */
+  /* border: 1px solid red; */
+  padding: 30px;
 
   @media (min-width: 1024px) {
     width: 50%;
@@ -130,9 +131,10 @@ const TextWrapper = styled.div`
 `
 
 const Paragraph = styled.p`
-  color: #34495e; // Texto atualizado para cinza azulado
+  color: #34495e;
   margin-bottom: 1.5rem;
   line-height: 1.6;
+  font-size: 1.1rem !important;
 `
 
 const Image = styled.img`

@@ -3,19 +3,20 @@ import RoutesComponent from './routes'
 import './app.css'
 import Nav from './components/Nav'
 import styled, { keyframes } from 'styled-components'
+import Footer from './components/Footer'
 
 const pulseAnimation = keyframes`
   0% {
     transform: scale(1);
-    box-shadow: 0 0 0 rgba(86, 231, 60, 0.5);
+    box-shadow: 0 0 0 rgba(86, 231, 60, 0.7);
   }
   50% {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(86, 231, 60, 0.5);
+    transform: scale(1.2);
+    box-shadow: 0 0 25px rgba(86, 231, 60, 0.7);
   }
   100% {
     transform: scale(1);
-    box-shadow: 0 0 0 rgba(86, 231, 60, 0.5);
+    box-shadow: 0 0 0 rgba(86, 231, 60, 0.7);
   }
 `
 
@@ -69,6 +70,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Nav />
+      <Footer />
 
       <RoutesComponent />
 

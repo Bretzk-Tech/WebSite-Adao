@@ -1,30 +1,34 @@
-// src/components/Pecas.tsx
-
 import React from 'react'
 import styled from 'styled-components'
 
-const Container = styled.div`
-  background-color: #004466; /* Ajustado para combinar com a paleta da Home */
-  padding: 50px 0;
-`;
+const Header = styled.div`
+  background-color: #004466;
+  padding: 70px 0;
+  background-image: url('src/assets/headerEstoque.png');
+  background-size: cover;
+  background-position: center;
+`
 
 const Title = styled.h2`
   color: #ffffff;
   text-align: center;
-  font-size: 36px; /* Aumentado para maior destaque */
+  font-size: 27px;
   font-weight: bold;
-  /* margin-bottom: 50px; */
-`;
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+  margin: 0;
+  line-height: 1.5; 
+  text-shadow: 2px 2px 4px rgb(0, 0, 0); 
+`
 
 const CardsWrapper = styled.div`
   display: flex;
   justify-content: center;
   gap: 24px; /* Ajustado para melhor espaçamento */
   flex-wrap: wrap;
-  background-color: #f0f8ff; /* Cor de fundo mais clara */
+  background-color:rgb(225, 225, 225);
   padding: 50px 30px;
-  border-radius: 8px; /* Adicionado bordas arredondadas */
-`;
+`
 
 const Card = styled.div`
   width: 280px;
@@ -36,26 +40,26 @@ const Card = styled.div`
   justify-content: space-between;
   background-color: #ffffff; /* Fundo branco para contraste */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adicionado sombra */
-`;
+`
 
 const CardImage = styled.img`
   max-width: 100%;
   height: 180px; /* Ajustado para uniformidade */
   object-fit: contain;
   padding: 20px;
-`;
+`
 
 const CardTitle = styled.h3`
   font-size: 20px; /* Aumentado para maior destaque */
   color: #004466; /* Ajustado para combinar com a paleta */
   margin: 16px 0 8px;
-`;
+`
 
 const CardDescription = styled.p`
   font-size: 14px;
   color: #666666; /* Cor ajustada para melhor contraste */
   margin: 0 16px 16px;
-`;
+`
 
 const Button = styled.button`
   background-color: #004466; /* Ajustado para combinar com a paleta */
@@ -69,7 +73,7 @@ const Button = styled.button`
   &:hover {
     background-color: #00334d; /* Cor de hover ajustada */
   }
-`;
+`
 
 const Pecas: React.FC = () => {
   const pecas = [
@@ -103,13 +107,13 @@ const Pecas: React.FC = () => {
       title: 'Válvula Reguladora de Pressão',
       description: 'Válvula para controle de pressão em sistemas hidráulicos'
     }
-  ];
+  ]
 
   return (
     <>
-      <Container>
-        <Title>PEÇAS</Title>
-      </Container>
+      <Header>
+        <Title>Peças de Reposição para Queimadores Industriais</Title>
+      </Header>
       <CardsWrapper>
         {pecas.map((peca, index) => (
           <Card key={index}>
@@ -121,7 +125,7 @@ const Pecas: React.FC = () => {
         ))}
       </CardsWrapper>
     </>
-  );
-};
+  )
+}
 
-export default Pecas;
+export default Pecas

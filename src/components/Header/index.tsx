@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 
 const HeaderSection = styled.header`
@@ -8,18 +7,11 @@ const HeaderSection = styled.header`
   text-align: center;
 `
 
-const TopBar = styled.div`
-  font-size: 1rem;
-  margin-bottom: 25px;
-  color: #b3b3b3;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-`
-
 const Title = styled.h1`
   font-size: 30px !important;
   font-weight: 700;
-  margin-bottom: 50px !important;
+  margin-top: 20px !important;
+  margin-bottom: 40px !important;
   color: #ecf0f1;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 `
@@ -29,13 +21,13 @@ const ProductGrid = styled.div`
   grid-template-columns: repeat(5, minmax(160px, 1fr));
   gap: 20px;
   justify-items: center;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto 60px auto;
 `
 
 const ProductImage = styled.img`
   width: 100%;
-  max-width: 160px;
+  max-width: 140px;
   height: auto;
   border-radius: 8px;
   background: white;
@@ -74,6 +66,7 @@ const CTAButton = styled.a`
 
   &:hover {
     background-color: #34495e;
+    transform: scale(1.05);
   }
 `
 
@@ -94,7 +87,6 @@ const Header = () => {
   return (
     <HeaderSection>
       <Title>Peças de reposição para seu queimador industrial.</Title>
-
       <ProductGrid>
         {produtos.map((src, i) => (
           <ProductImage key={i} src={src} alt={`Produto ${i + 1}`} />
@@ -104,7 +96,7 @@ const Header = () => {
       <CTABox>
         <CTATitle>Conheça nosso catálogo de peças!</CTATitle>
         <CTAText>Entregamos em todo o Brasil!</CTAText>
-        <CTAButton href='#produtos'>Ver Produtos</CTAButton>
+        <CTAButton href='/products'>Ver Produtos</CTAButton>
       </CTABox>
     </HeaderSection>
   )

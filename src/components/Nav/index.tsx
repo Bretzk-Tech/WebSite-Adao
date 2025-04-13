@@ -101,8 +101,8 @@ const ContactBar = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f1c40f; // Amarelo
-  padding: 10px 20px;
+  background-color: #f1c40f;
+  padding: 7px 0;
   font-size: 14px;
   color: #000;
 
@@ -142,15 +142,12 @@ export default function Nav() {
           <div style={{ display: 'flex', gap: '10px', fontSize: '14px' }}>
             <span>📞 (47) 3378-5990</span>
             <span>📱 (47) 99147-1021</span>
-            <a href='mailto:adaocatherm@tarra.com.br'>
-              ✉ adaocatherm@tarra.com.br
-            </a>
+            <span>✉ adaocatherm@tarra.com.br</span>
           </div>
           <div className='social-icons'>
-            <a href='#'>🔗 Facebook</a>
+            <a href='#'>🔗 Whatsapp</a>
             <a href='#'>🔗 Instagram</a>
-            <a href='#'>🔗 LinkedIn</a>
-            <a href='#'>🔗 YouTube</a>
+            <a href='#'>🔗 Facebook</a>
           </div>
         </Center>
       </ContactBar>
