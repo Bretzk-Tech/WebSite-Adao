@@ -70,7 +70,6 @@ export default function App() {
   return (
     <BrowserRouter>
       <Nav />
-      <Footer />
 
       <RoutesComponent />
 
@@ -85,6 +84,8 @@ export default function App() {
           alt='WhatsApp Icon'
         />
       </WhatsAppButton>
+
+      <Footer />
     </BrowserRouter>
   )
 }
