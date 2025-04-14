@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 const FooterContainer = styled.footer`
-  background-color: #ecf0f1; // Fundo cinza muito claro
-  color: #34495e; // Texto cinza azulado
+  background-color: rgb(62, 62, 62);
+  color:rgb(255, 255, 255);
   text-align: center;
   padding: 1rem 0;
 `
