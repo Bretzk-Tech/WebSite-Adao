@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -278,6 +279,7 @@ const Contact = () => {
                 contato hoje mesmo e leve seu negócio a novos patamares de
                 desempenho e produtividade!
               </Paragraph>
+
               <Image
                 src='src/assets/logo.png'
                 alt='Logo da Catherm Comercial Ltda. com texto em vermelho'

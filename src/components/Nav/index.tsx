@@ -1,14 +1,15 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
 import { FiMenu, FiX } from 'react-icons/fi'
+import { Link } from 'react-router-dom'
 
 const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 18px 24px;
-  background-color: #ffffff; // Fundo branco
-  border-bottom: 1px solid #ecf0f1; // Borda cinza muito claro
+  background-color: #ffffff;
+  border-bottom: 1px solid #ecf0f1;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
   position: sticky;
   top: 0;
@@ -31,6 +32,14 @@ const Logo = styled.div`
     font-weight: 700;
     color: #222;
   }
+`
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
 const MenuToggle = styled.div`
@@ -95,6 +104,7 @@ const Center = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  cursor: pointer;
 `
 
 const ContactBar = styled.div`
@@ -154,8 +164,10 @@ export default function Nav() {
       <NavContainer>
         <Center>
           <Logo>
-            <img src='src/assets/logo.png' alt='Logo' />
-            <span>Catherm</span>
+            <StyledLink to='/'>
+              <img src='src/assets/logo.png' alt='Logo' />
+              <span>Catherm</span>
+            </StyledLink>
           </Logo>
 
           <MenuToggle onClick={toggleMenu}>
@@ -179,6 +191,15 @@ export default function Nav() {
                 onClick={() => handleLinkClick('/products')}
               >
                 Produtos
+              </a>
+            </li>
+            <li>
+              <a
+                href='/burners'
+                className={activeLink === '/burners' ? 'active' : ''}
+                onClick={() => handleLinkClick('/burners')}
+              >
+                Queimadores
               </a>
             </li>
           </NavLinks>

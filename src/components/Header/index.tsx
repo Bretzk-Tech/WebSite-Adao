@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 const HeaderSection = styled.header`
-  background: linear-gradient(to bottom, #2c3e50, #34495e);
+  /* background: linear-gradient(to bottom, #2c3e50, #34495e); */
+  background-image: url('src/assets/headerEstoque.png');
   color: white;
   padding: 20px 20px;
   text-align: center;
@@ -81,7 +82,7 @@ const Header = () => {
     '/src/assets/motor07.avif',
     '/src/assets/motor08.avif',
     '/src/assets/motor09.avif',
-    '/src/assets/motor10.avif'
+    '/src/assets/image.png'
   ]
 
   return (

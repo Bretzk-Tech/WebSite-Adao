@@ -14,20 +14,26 @@ const Title = styled.h2`
   text-align: center;
   font-size: 27px;
   font-weight: bold;
-  text-transform: uppercase; 
-  letter-spacing: 2px; 
+  text-transform: uppercase;
+  letter-spacing: 2px;
   margin: 0;
-  line-height: 1.5; 
-  text-shadow: 2px 2px 4px rgb(0, 0, 0); 
+  line-height: 1.5;
+  text-shadow: 3px 2px 4px rgb(0, 0, 0);
 `
 
 const CardsWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 24px; /* Ajustado para melhor espaçamento */
+  background-color: rgb(225, 225, 225);
+  align-items: center;
+  justify-items: center;
+`
+const Center = styled.div`
+  gap: 24px;
   flex-wrap: wrap;
-  background-color:rgb(225, 225, 225);
+  background-color: rgb(225, 225, 225);
   padding: 50px 30px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(160px, 1fr));
+  justify-items: center;
 `
 
 const Card = styled.div`
@@ -78,33 +84,33 @@ const Button = styled.button`
 const Pecas: React.FC = () => {
   const pecas = [
     {
-      image: '/pecas/chama.png',
-      title: 'Controlador de chama TGRD62',
+      image: 'src/assets/motor10.avif',
+      title: 'Controle e Monitoramento',
       description: 'Programador de chama TGRD - Brahma'
     },
     {
-      image: '/pecas/vmr2.png',
-      title: 'Eletroválvula VMR2 - 3/4”',
+      image: 'src/assets/motor01.avif',
+      title: 'Transformadores de Ignição',
       description: 'Eletroválvula VMR2'
     },
     {
-      image: '/pecas/vml2.png',
-      title: 'Eletroválvulas VML2 - 3/4”',
+      image: 'src/assets/motor05.avif',
+      title: 'Válvulas Solenóides',
       description: 'Eletroválvulas VML2'
     },
     {
-      image: '/pecas/sensor.png',
-      title: 'Sensor de Temperatura',
+      image: 'src/assets/motor03.avif',
+      title: 'Bombas de Óleo',
       description: 'Sensor de alta precisão para controle térmico'
     },
     {
-      image: '/pecas/bomba.png',
-      title: 'Bomba de Água Industrial',
+      image: 'src/assets/motor08.avif',
+      title: 'Motores',
       description: 'Bomba de alta eficiência para sistemas industriais'
     },
     {
-      image: '/pecas/valvula.png',
-      title: 'Válvula Reguladora de Pressão',
+      image: 'src/assets/motor07.avif',
+      title: 'Variados',
       description: 'Válvula para controle de pressão em sistemas hidráulicos'
     }
   ]
@@ -115,14 +121,16 @@ const Pecas: React.FC = () => {
         <Title>Peças de Reposição para Queimadores Industriais</Title>
       </Header>
       <CardsWrapper>
-        {pecas.map((peca, index) => (
-          <Card key={index}>
-            <CardImage src={peca.image} alt={peca.title} />
-            <CardTitle>{peca.title}</CardTitle>
-            <CardDescription>{peca.description}</CardDescription>
-            <Button>Saiba Mais</Button>
-          </Card>
-        ))}
+        <Center>
+          {pecas.map((peca, index) => (
+            <Card key={index}>
+              <CardImage src={peca.image} alt={peca.title} />
+              <CardTitle>{peca.title}</CardTitle>
+              <CardDescription>{peca.description}</CardDescription>
+              <Button>Saiba Mais</Button>
+            </Card>
+          ))}
+        </Center>
       </CardsWrapper>
     </>
   )
