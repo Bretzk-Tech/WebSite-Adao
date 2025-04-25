@@ -79,7 +79,16 @@ export default function Sobre() {
             seus sistemas de queima industrial.
           </Paragraph>
         </ContainerText>
-        <Image src={fornecedoresImage} alt='Fornecedores Renomados' />
+
+        <div
+          style={{
+            padding: '20px',
+            border: '1px solid #44444444'
+          }}
+        >
+          <h2 style={{ marginBottom: '15px' }}>Fornecedores Renomados</h2>
+          <Image src={fornecedoresImage} alt='Fornecedores Renomados' />
+        </div>
       </Section>
     </Container>
   )
