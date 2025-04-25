@@ -11,7 +11,6 @@ import logo from '../../assets/logo.png'
 const Header = styled.div`
   background-color: #004466;
   padding: 30px 0;
-  background-image: url(${headerEstoque});
   background-size: cover;
   background-position: center;
 `

@@ -13,7 +13,6 @@ import motor09 from '../../assets/motor09.avif'
 import image from '../../assets/image.png'
 
 const HeaderSection = styled.header`
-  /* background: linear-gradient(to bottom, #2c3e50, #34495e); */
   background-image: url(${headerBackground});
   color: white;
   padding: 20px 20px;

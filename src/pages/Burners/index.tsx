@@ -35,7 +35,6 @@ const StyledImage = styled.img`
 const Header = styled.div`
   background-color: #004466;
   padding: 30px 0;
-  /* background-image: url('src/assets/headerEstoque.png'); */
   background-size: cover;
   background-position: center;
 `
