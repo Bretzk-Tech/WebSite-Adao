@@ -17,7 +17,7 @@ const ImageGrid = styled.div`
 `
 
 const StyledImage = styled.img`
-  max-width: 500px;
+  max-width: 450px;
   height: auto;
   border-radius: 8px;
   transition: transform 0.3s ease;
@@ -48,24 +48,71 @@ const Title = styled.h2`
 `
 
 const Description = styled.div`
-  padding: 60px 20px;
+  padding: 80px 20px;
   background-color: #ffffff;
   text-align: center;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  margin-top: -40px;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
 
   h2 {
-    font-size: 28px;
+    font-size: 32px;
     color: #004466;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: #004466;
+    }
   }
 
   p {
     font-size: 18px;
-    line-height: 1.6;
-    color: #444;
-    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 30px;
     text-align: justify;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.3s ease;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      color: #333;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 15px;
+    margin-top: -20px;
+
+    h2 {
+      font-size: 26px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
   }
 `
 
