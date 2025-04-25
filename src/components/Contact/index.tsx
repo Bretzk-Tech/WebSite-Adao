@@ -198,7 +198,7 @@ const Contact = () => {
             <p>Acompanhe nossas novidades e lançamentos nas redes sociais!</p>
             <div className='icons'>
               <a
-                href='https://www.instagram.com/YOUR_INSTAGRAM_HANDLE'
+                href='https://www.instagram.com/catherm_comercio/'
                 target='_blank'
                 rel='noopener noreferrer'
                 aria-label='Siga-nos no Instagram'

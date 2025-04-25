@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 import { FiMenu, FiX } from 'react-icons/fi'
+import { FaWhatsapp, FaInstagram, FaFacebook } from 'react-icons/fa'
 import { Link, useLocation } from 'react-router-dom'
 import logoImage from '../../assets/logo.png'
 
@@ -125,10 +126,18 @@ const ContactBar = styled.div`
 
   .social-icons {
     display: flex;
-    gap: 10px;
+    gap: 15px;
 
     a {
-      font-size: 15px;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      transition: transform 0.2s ease, color 0.2s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        color: #333;
+      }
     }
   }
 `
@@ -161,11 +170,26 @@ export default function Nav() {
               href='https://wa.me/5547991471021'
               target='_blank'
               rel='noopener noreferrer'
+              title='WhatsApp'
             >
-              🔗 Whatsapp
+              <FaWhatsapp />
             </a>
-            <a href='#'>🔗 Instagram</a>
-            <a href='#'>🔗 Facebook</a>
+            <a
+              href='https://www.instagram.com/catherm_comercio/'
+              target='_blank'
+              rel='noopener noreferrer'
+              title='Instagram'
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href='#'
+              target='_blank'
+              rel='noopener noreferrer'
+              title='Facebook'
+            >
+              <FaFacebook />
+            </a>
           </div>
         </Center>
       </ContactBar>
