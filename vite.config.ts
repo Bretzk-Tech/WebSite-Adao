@@ -11,6 +11,6 @@ export default defineConfig({
     }
   },
   build: {
-    assetsInlineLimit: 0, // Garante que todas as imagens sejam processadas como arquivos
+    assetsInlineLimit: 0 // Garante que todas as imagens sejam processadas como arquivos
   }
 })
