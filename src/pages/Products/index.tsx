@@ -1,9 +1,17 @@
 import styled from 'styled-components'
+import headerEstoque from '../../assets/headerEstoque.png'
+import motor01 from '../../assets/motor01.avif'
+import motor03 from '../../assets/motor03.avif'
+import motor05 from '../../assets/motor05.avif'
+import motor07 from '../../assets/motor07.avif'
+import motor08 from '../../assets/motor08.avif'
+import motor10 from '../../assets/motor10.avif'
+import logo from '../../assets/logo.png'
 
 const Header = styled.div`
   background-color: #004466;
   padding: 30px 0;
-  /* background-image: url('src/assets/headerEstoque.png'); */
+  background-image: url(${headerEstoque});
   background-size: cover;
   background-position: center;
 `
@@ -22,7 +30,7 @@ const Title = styled.h2`
 
 const CardsWrapper = styled.div`
   background-color: rgb(225, 225, 225);
-  background-image: url('src/assets/headerEstoque.png');
+  background-image: url(${headerEstoque});
   align-items: center;
   justify-items: center;
 `
@@ -128,32 +136,32 @@ const Image = styled.img`
 const Pecas: React.FC = () => {
   const pecas = [
     {
-      image: 'src/assets/motor10.avif',
+      image: motor10,
       title: 'Controle e Monitoramento',
       description: 'Dispositivos para automação e segurança de queimadores'
     },
     {
-      image: 'src/assets/motor01.avif',
+      image: motor01,
       title: 'Transformadores de Ignição',
       description: 'Sistemas de alta energia para ignição confiável'
     },
     {
-      image: 'src/assets/motor05.avif',
+      image: motor05,
       title: 'Válvulas Solenóides',
       description: 'Controle preciso do fluxo de combustível'
     },
     {
-      image: 'src/assets/motor03.avif',
+      image: motor03,
       title: 'Bombas de Óleo',
       description: 'Transporte eficiente de combustível líquido'
     },
     {
-      image: 'src/assets/motor08.avif',
+      image: motor08,
       title: 'Motores',
       description: 'Acionamentos robustos para ventiladores e bombas'
     },
     {
-      image: 'src/assets/motor07.avif',
+      image: motor07,
       title: 'Componentes Diversos',
       description: 'Peças essenciais para manutenção completa'
     }
@@ -208,7 +216,7 @@ const Pecas: React.FC = () => {
           </div>
           <div>
             <Image
-              src='src/assets/logo.png'
+              src={logo}
               alt='Logo da Catherm Comercial Ltda. com texto em vermelho'
             />
           </div>

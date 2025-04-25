@@ -1,4 +1,9 @@
 import styled from 'styled-components'
+import qm100Eco from '../../assets/qm100Eco.png'
+import qm100Slim from '../../assets/qm100Slim.png'
+import qm400Eco from '../../assets/qm400Eco.png'
+import qm400Slim from '../../assets/qm400Slim.png'
+import qm400Turbo from '../../assets/qm400Turbo.png'
 
 const Container = styled.div`
   background-color: #f0f0f0;
@@ -124,11 +129,11 @@ export default function Burners() {
       </Header>
 
       <ImageGrid>
-        <StyledImage src='src/assets/qm100Eco.png' alt='QM100 Eco' />
-        <StyledImage src='src/assets/qm100Slim.png' alt='QM100 Slim' />
-        <StyledImage src='src/assets/qm400Eco.png' alt='QM400 Eco' />
-        <StyledImage src='src/assets/qm400Slim.png' alt='QM400 Slim' />
-        <StyledImage src='src/assets/qm400Turbo.png' alt='QM400 Turbo' />
+        <StyledImage src={qm100Eco} alt='QM100 Eco' />
+        <StyledImage src={qm100Slim} alt='QM100 Slim' />
+        <StyledImage src={qm400Eco} alt='QM400 Eco' />
+        <StyledImage src={qm400Slim} alt='QM400 Slim' />
+        <StyledImage src={qm400Turbo} alt='QM400 Turbo' />
       </ImageGrid>
 
       <Description>
