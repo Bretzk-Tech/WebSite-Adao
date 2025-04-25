@@ -7,6 +7,7 @@ import qm400Turbo from '../../assets/qm400Turbo.png'
 
 const Container = styled.div`
   background-color: #f0f0f0;
+  padding-bottom: 10px;
 `
 
 const ImageGrid = styled.div`
@@ -59,7 +60,7 @@ const Description = styled.div`
   margin: 0 auto;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
-  margin-top: -40px;
+  margin-top: 0px;
   margin-bottom: 60px;
   position: relative;
   z-index: 1;

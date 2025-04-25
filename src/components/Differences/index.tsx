@@ -44,19 +44,28 @@ const Diferenciais = () => {
         <Item>
           <Image src='src/assets/image1.png' alt='Atendimento' />
           <Text>
-            Consultoria técnica personalizada com engenheiros especializados para diagnosticar, selecionar e otimizar a solução ideal para seu sistema de combustão, garantindo máxima eficiência e segurança operacional.
+            Consultoria técnica personalizada com engenheiros especializados
+            para diagnosticar, selecionar e otimizar a solução ideal para seu
+            sistema de combustão, garantindo máxima eficiência e segurança
+            operacional.
           </Text>
         </Item>
         <Item>
           <Image src='src/assets/image2.png' alt='Estoque' />
           <Text>
-            Centro logístico estratégico com mais de 5.000 peças originais em pronta entrega, sistema de distribuição ágil e monitoramento inteligente de estoques para eliminar paradas não programadas na sua produção.
+            Centro logístico estratégico com mais de 5.000 peças originais em
+            pronta entrega, sistema de distribuição ágil e monitoramento
+            inteligente de estoques para eliminar paradas não programadas na sua
+            produção.
           </Text>
         </Item>
         <Item>
           <Image src='src/assets/image3.png' alt='Confiança' />
           <Text>
-            Excelência certificada com mais de 20 anos no mercado, parcerias exclusivas com fabricantes internacionais de elite, certificação ISO 9001 e rastreabilidade completa em todos os componentes para sua total segurança.
+            Excelência certificada com mais de 20 anos no mercado, parcerias
+            exclusivas com fabricantes internacionais de elite, certificação ISO
+            9001 e rastreabilidade completa em todos os componentes para sua
+            total segurança.
           </Text>
         </Item>
       </ItemsContainer>
