@@ -196,15 +196,13 @@ const Contact = () => {
       <Container>
         <InnerContainer>
           <SocialMediaSection>
-            <p>
-              Conecte-se conosco nas redes sociais e acompanhe as novidades!
-            </p>
+            <p>Acompanhe nossas novidades e lançamentos nas redes sociais!</p>
             <div className='icons'>
               <a
                 href='https://www.instagram.com/YOUR_INSTAGRAM_HANDLE'
                 target='_blank'
                 rel='noopener noreferrer'
-                aria-label='Follow us on Instagram'
+                aria-label='Siga-nos no Instagram'
               >
                 <img
                   src='https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png'
@@ -215,7 +213,7 @@ const Contact = () => {
                 href='https://web.whatsapp.com/send?phone=YOUR_PHONE_NUMBER'
                 target='_blank'
                 rel='noopener noreferrer'
-                aria-label='Contact us on WhatsApp'
+                aria-label='Contate-nos pelo WhatsApp'
               >
                 <img
                   src='https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg'
@@ -226,7 +224,7 @@ const Contact = () => {
           </SocialMediaSection>
           <FlexWrapper>
             <FormWrapper>
-              <Title>Entre em Contato conosco!</Title>
+              <Title>Solicite um orçamento!</Title>
               <Form onSubmit={handleSubmit}>
                 <div>
                   <Label htmlFor='name'>Nome</Label>
@@ -271,13 +269,14 @@ const Contact = () => {
             </FormWrapper>
             <TextWrapper>
               <Paragraph>
-                Pronto para maximizar a eficiência de seus queimadores
-                industriais? Solicite agora mesmo uma cotação de peças conosco e
-                dê o próximo passo para otimizar sua operação. Nossa equipe
-                experiente está pronta para fornecer as soluções personalizadas
-                e de alta qualidade que você precisa. Não perca tempo, entre em
-                contato hoje mesmo e leve seu negócio a novos patamares de
-                desempenho e produtividade!
+                Maximize a eficiência dos seus queimadores de biomassa com
+                nossas peças de reposição de alta qualidade. Desenvolvidas para
+                garantir operação confiável e duradoura, nossas soluções ajudam
+                a reduzir custos operacionais e minimizar paradas não
+                programadas. Conte com nossa experiência para encontrar os
+                componentes ideais para seu equipamento. Solicite agora mesmo um
+                orçamento personalizado e descubra como podemos otimizar o
+                desempenho do seu sistema de combustão!
               </Paragraph>
 
               <Image

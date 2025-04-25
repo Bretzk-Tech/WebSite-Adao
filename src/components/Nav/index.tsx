@@ -155,7 +155,13 @@ export default function Nav() {
             <span>✉ adaocatherm@tarra.com.br</span>
           </div>
           <div className='social-icons'>
-            <a href='#'>🔗 Whatsapp</a>
+            <a
+              href='https://wa.me/5547991471021'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              🔗 Whatsapp
+            </a>
             <a href='#'>🔗 Instagram</a>
             <a href='#'>🔗 Facebook</a>
           </div>

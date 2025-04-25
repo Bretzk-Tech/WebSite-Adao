@@ -131,39 +131,39 @@ const Pecas: React.FC = () => {
     {
       image: 'src/assets/motor10.avif',
       title: 'Controle e Monitoramento',
-      description: ''
+      description: 'Dispositivos para automação e segurança de queimadores'
     },
     {
       image: 'src/assets/motor01.avif',
       title: 'Transformadores de Ignição',
-      description: ''
+      description: 'Sistemas de alta energia para ignição confiável'
     },
     {
       image: 'src/assets/motor05.avif',
       title: 'Válvulas Solenóides',
-      description: ''
+      description: 'Controle preciso do fluxo de combustível'
     },
     {
       image: 'src/assets/motor03.avif',
       title: 'Bombas de Óleo',
-      description: ''
+      description: 'Transporte eficiente de combustível líquido'
     },
     {
       image: 'src/assets/motor08.avif',
       title: 'Motores',
-      description: ''
+      description: 'Acionamentos robustos para ventiladores e bombas'
     },
     {
       image: 'src/assets/motor07.avif',
-      title: 'Variados',
-      description: ''
+      title: 'Componentes Diversos',
+      description: 'Peças essenciais para manutenção completa'
     }
   ]
 
   return (
     <>
       <Header>
-        <Title>Peças de Reposição para Queimadores Industriais</Title>
+        <Title>Peças de Reposição para Queimadores de Biomassa</Title>
       </Header>
       <CardsWrapper>
         <Center>
@@ -180,7 +180,7 @@ const Pecas: React.FC = () => {
         </Center>
       </CardsWrapper>
       <Description>
-        <h2>Eficiência e Segurança para Queimadores Industriais</h2>
+        <h2>Qualidade e Confiabilidade para seu Sistema de Combustão</h2>
 
         <section
           style={{
@@ -192,19 +192,19 @@ const Pecas: React.FC = () => {
         >
           <div>
             <p>
-              Oferecemos uma linha completa de peças e dispositivos de controle
-              para sistemas de queima industrial, garantindo segurança e
-              eficiência no funcionamento dos queimadores. Com componentes das
-              principais marcas globais, nossa seleção proporciona desempenho
-              otimizado e operação contínua.
+              Nossa linha completa de peças e componentes para queimadores de
+              biomassa foi cuidadosamente selecionada para garantir o desempenho
+              ideal do seu equipamento. Trabalhamos com fabricantes renomados,
+              assegurando produtos que atendem aos mais rigorosos padrões de
+              qualidade e segurança.
             </p>
             <br />
             <p>
-              Trabalhamos com materiais duráveis e tecnologia avançada,
-              assegurando confiabilidade a longo prazo. Conte com nosso suporte
-              especializado para obter o máximo retorno do seu investimento.
-              Explore agora nosso catálogo e encontre a solução ideal para sua
-              operação!
+              Oferecemos suporte técnico especializado para auxiliar na escolha
+              das peças corretas para o seu modelo de queimador, maximizando a
+              eficiência e prolongando a vida útil do equipamento. Conte com
+              nossa experiência para manter seu sistema operando com segurança e
+              produtividade.
             </p>
           </div>
           <div>

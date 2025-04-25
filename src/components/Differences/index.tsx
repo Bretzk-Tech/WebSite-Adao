@@ -1,4 +1,3 @@
-// Removed unused React import
 import styled from 'styled-components'
 
 const Container = styled.section`
@@ -34,7 +33,7 @@ const Image = styled.img`
 const Text = styled.p`
   font-size: 1rem;
   line-height: 1.6;
-  color: white !important; 
+  color: white !important;
 `
 
 const Diferenciais = () => {
@@ -45,22 +44,23 @@ const Diferenciais = () => {
         <Item>
           <Image src='src/assets/image1.png' alt='Atendimento' />
           <Text>
-            Atendimento especializado e pronto para auxiliar nossos clientes com
-            suas demandas
+            Atendimento técnico especializado para identificar a solução ideal
+            para seu sistema de queima industrial
           </Text>
         </Item>
         <Item>
           <Image src='src/assets/image2.png' alt='Estoque' />
           <Text>
-            Amplo estoque, com a capacidade de oferecer pronta entrega em uma
-            grande variedade de itens
+            Amplo estoque de peças originais com pronta entrega para minimizar
+            paradas e garantir a continuidade da sua operação
           </Text>
         </Item>
         <Item>
           <Image src='src/assets/image3.png' alt='Confiança' />
           <Text>
-            Reputação e confiança: na Ticino valorizamos a idoneidade e
-            transparência na relação entre nós e nossos clientes
+            Compromisso com qualidade e transparência: trabalhamos com as
+            melhores marcas do mercado e garantimos a procedência de todas as
+            peças
           </Text>
         </Item>
       </ItemsContainer>

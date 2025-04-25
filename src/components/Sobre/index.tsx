@@ -68,14 +68,15 @@ export default function Sobre() {
       <Section>
         <ContainerText>
           <Paragraph>
-            A Ticino é uma empresa especializada em soluções de combustão
-            industrial, oferecendo uma ampla gama de produtos e serviços para
-            atender às necessidades dos nossos clientes.
+            Somos especialistas em soluções para queimadores de biomassa,
+            oferecendo uma linha completa de peças de reposição e equipamentos
+            de alta qualidade para sistemas de combustão industrial.
           </Paragraph>
           <Paragraph>
-            Com anos de experiência no setor, nossa equipe está pronta para
-            fornecer o suporte necessário para otimizar o desempenho dos
-            sistemas de combustão.
+            Com vasta experiência no setor e parcerias com os melhores
+            fabricantes do mercado, garantimos produtos confiáveis e o suporte
+            técnico necessário para otimizar o desempenho e a eficiência dos
+            seus sistemas de queima industrial.
           </Paragraph>
         </ContainerText>
         <Image src={fornecedoresImage} alt='Fornecedores Renomados' />

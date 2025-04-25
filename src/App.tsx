@@ -46,7 +46,7 @@ const WhatsAppButton = styled.a`
     box-shadow: 0 0 0 3px rgba(86, 231, 60, 0.5);
   }
 
-  &:hover::after {
+  &:after {
     content: 'Entrar em contato';
     position: absolute;
     bottom: 4.5rem;
@@ -74,10 +74,10 @@ export default function App() {
       <RoutesComponent />
 
       <WhatsAppButton
-        href='https://web.whatsapp.com/send?phone=YOUR_PHONE_NUMBER'
+        href='https://wa.me/5547991471021'
         target='_blank'
         rel='noopener noreferrer'
-        aria-label='Contact us on WhatsApp'
+        aria-label='Fale conosco pelo WhatsApp'
       >
         <WhatsAppIcon
           src='https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg'

@@ -87,7 +87,7 @@ const Header = () => {
 
   return (
     <HeaderSection>
-      <Title>Peças de reposição para seu queimador industrial.</Title>
+      <Title>Soluções completas em peças para queimadores de biomassa</Title>
       <ProductGrid>
         {produtos.map((src, i) => (
           <ProductImage key={i} src={src} alt={`Produto ${i + 1}`} />
@@ -95,8 +95,8 @@ const Header = () => {
       </ProductGrid>
 
       <CTABox>
-        <CTATitle>Conheça nosso catálogo de peças!</CTATitle>
-        <CTAText>Entregamos em todo o Brasil!</CTAText>
+        <CTATitle>Explore nosso catálogo especializado!</CTATitle>
+        <CTAText>Entrega rápida para todo o Brasil</CTAText>
         <CTAButton href='/products'>Ver Produtos</CTAButton>
       </CTABox>
     </HeaderSection>
