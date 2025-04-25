@@ -8,7 +8,7 @@ export default function RoutesComponent() {
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/products' element={<Products />} />
-      <Route path='/Burners' element={<Burners />} />
+      <Route path='/burners' element={<Burners />} />
     </Routes>
   )
 }

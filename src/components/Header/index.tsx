@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import headerBackground from '../../assets/headerEstoque.png'
 import motor01 from '../../assets/motor01.avif'
 import motor02 from '../../assets/motor02.avif'
@@ -65,10 +66,9 @@ const CTAText = styled.p`
   margin-bottom: 20px;
 `
 
-const CTAButton = styled.a`
+const CTAButton = styled(Link)`
   display: inline-block;
   background-color: #2c3e50;
-
   color: white;
   padding: 12px 30px;
   border-radius: 8px;
@@ -108,7 +108,7 @@ const Header = () => {
       <CTABox>
         <CTATitle>Explore nosso catálogo especializado!</CTATitle>
         <CTAText>Entrega rápida para todo o Brasil</CTAText>
-        <CTAButton href='/products'>Ver Produtos</CTAButton>
+        <CTAButton to='/products'>Ver Produtos</CTAButton>
       </CTABox>
     </HeaderSection>
   )

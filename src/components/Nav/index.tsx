@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 import { FiMenu, FiX } from 'react-icons/fi'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import logoImage from '../../assets/logo.png'
 
 const NavContainer = styled.nav`
@@ -135,7 +135,8 @@ const ContactBar = styled.div`
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [activeLink, setActiveLink] = useState('/')
+  const location = useLocation()
+  const [activeLink, setActiveLink] = useState(location.pathname)
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen)
@@ -183,31 +184,31 @@ export default function Nav() {
 
           <NavLinks isOpen={menuOpen}>
             <li>
-              <a
-                href='/'
+              <Link
+                to='/'
                 className={activeLink === '/' ? 'active' : ''}
                 onClick={() => handleLinkClick('/')}
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href='/products'
+              <Link
+                to='/products'
                 className={activeLink === '/products' ? 'active' : ''}
                 onClick={() => handleLinkClick('/products')}
               >
                 Produtos
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href='/burners'
+              <Link
+                to='/burners'
                 className={activeLink === '/burners' ? 'active' : ''}
                 onClick={() => handleLinkClick('/burners')}
               >
                 Queimadores
-              </a>
+              </Link>
             </li>
           </NavLinks>
         </Center>
