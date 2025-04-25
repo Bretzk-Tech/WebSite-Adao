@@ -1,6 +1,6 @@
 import { BrowserRouter } from 'react-router-dom'
 import RoutesComponent from './routes'
-import './app.css'
+import './App.css'
 import Nav from './components/Nav'
 import styled, { keyframes } from 'styled-components'
 import Footer from './components/Footer'
