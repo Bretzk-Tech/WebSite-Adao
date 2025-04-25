@@ -44,23 +44,19 @@ const Diferenciais = () => {
         <Item>
           <Image src='src/assets/image1.png' alt='Atendimento' />
           <Text>
-            Atendimento técnico especializado para identificar a solução ideal
-            para seu sistema de queima industrial
+            Consultoria técnica personalizada com engenheiros especializados para diagnosticar, selecionar e otimizar a solução ideal para seu sistema de combustão, garantindo máxima eficiência e segurança operacional.
           </Text>
         </Item>
         <Item>
           <Image src='src/assets/image2.png' alt='Estoque' />
           <Text>
-            Amplo estoque de peças originais com pronta entrega para minimizar
-            paradas e garantir a continuidade da sua operação
+            Centro logístico estratégico com mais de 5.000 peças originais em pronta entrega, sistema de distribuição ágil e monitoramento inteligente de estoques para eliminar paradas não programadas na sua produção.
           </Text>
         </Item>
         <Item>
           <Image src='src/assets/image3.png' alt='Confiança' />
           <Text>
-            Compromisso com qualidade e transparência: trabalhamos com as
-            melhores marcas do mercado e garantimos a procedência de todas as
-            peças
+            Excelência certificada com mais de 20 anos no mercado, parcerias exclusivas com fabricantes internacionais de elite, certificação ISO 9001 e rastreabilidade completa em todos os componentes para sua total segurança.
           </Text>
         </Item>
       </ItemsContainer>
