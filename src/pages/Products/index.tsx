@@ -180,7 +180,7 @@ const Pecas: React.FC = () => {
               {peca.description && (
                 <CardDescription>{peca.description}</CardDescription>
               )}
-              <Button>Saiba Mais</Button>
+              <Button>Ver Mais</Button>
             </Card>
           ))}
         </Center>
