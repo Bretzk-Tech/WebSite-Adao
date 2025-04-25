@@ -1,4 +1,7 @@
 import styled from 'styled-components'
+import image1 from '../../assets/image1.png'
+import image2 from '../../assets/image2.png'
+import image3 from '../../assets/image3.png'
 
 const Container = styled.section`
   background-color: #2c3e50; // Azul petróleo
@@ -42,7 +45,7 @@ const Diferenciais = () => {
       <Title>Nossos Diferenciais</Title>
       <ItemsContainer>
         <Item>
-          <Image src='src/assets/image1.png' alt='Atendimento' />
+          <Image src={image1} alt='Atendimento' />
           <Text>
             Consultoria técnica personalizada com engenheiros especializados
             para diagnosticar, selecionar e otimizar a solução ideal para seu
@@ -51,7 +54,7 @@ const Diferenciais = () => {
           </Text>
         </Item>
         <Item>
-          <Image src='src/assets/image2.png' alt='Estoque' />
+          <Image src={image2} alt='Estoque' />
           <Text>
             Centro logístico estratégico com mais de 5.000 peças originais em
             pronta entrega, sistema de distribuição ágil e monitoramento
@@ -60,7 +63,7 @@ const Diferenciais = () => {
           </Text>
         </Item>
         <Item>
-          <Image src='src/assets/image3.png' alt='Confiança' />
+          <Image src={image3} alt='Confiança' />
           <Text>
             Excelência certificada com mais de 20 anos no mercado, parcerias
             exclusivas com fabricantes internacionais de elite, certificação ISO
