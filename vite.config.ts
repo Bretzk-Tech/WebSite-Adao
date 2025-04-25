@@ -1,16 +1,18 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
+import { fileURLToPath } from 'url'
+import path from 'path'
 
-// https://vite.dev/config/
+// Get the directory name using ESM compatible approach
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src')
+      '@': path.resolve(__dirname, './src')
     }
-  },
-  build: {
-    assetsInlineLimit: 0 // Garante que todas as imagens sejam processadas como arquivos
   }
 })
