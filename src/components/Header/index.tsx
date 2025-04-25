@@ -1,8 +1,19 @@
 import styled from 'styled-components'
+import headerBackground from '../../assets/headerEstoque.png'
+import motor01 from '../../assets/motor01.avif'
+import motor02 from '../../assets/motor02.avif'
+import motor03 from '../../assets/motor03.avif'
+import motor04 from '../../assets/motor04.avif'
+import motor05 from '../../assets/motor05.avif'
+import motor06 from '../../assets/motor06.avif'
+import motor07 from '../../assets/motor07.avif'
+import motor08 from '../../assets/motor08.avif'
+import motor09 from '../../assets/motor09.avif'
+import image from '../../assets/image.png'
 
 const HeaderSection = styled.header`
   /* background: linear-gradient(to bottom, #2c3e50, #34495e); */
-  background-image: url('src/assets/headerEstoque.png');
+  background-image: url(${headerBackground});
   color: white;
   padding: 20px 20px;
   text-align: center;
@@ -73,16 +84,16 @@ const CTAButton = styled.a`
 
 const Header = () => {
   const produtos = [
-    '/src/assets/motor01.avif',
-    '/src/assets/motor02.avif',
-    '/src/assets/motor03.avif',
-    '/src/assets/motor04.avif',
-    '/src/assets/motor05.avif',
-    '/src/assets/motor06.avif',
-    '/src/assets/motor07.avif',
-    '/src/assets/motor08.avif',
-    '/src/assets/motor09.avif',
-    '/src/assets/image.png'
+    motor01,
+    motor02,
+    motor03,
+    motor04,
+    motor05,
+    motor06,
+    motor07,
+    motor08,
+    motor09,
+    image
   ]
 
   return (

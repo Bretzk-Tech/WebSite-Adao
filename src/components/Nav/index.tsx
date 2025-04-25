@@ -2,6 +2,7 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import { FiMenu, FiX } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
+import logoImage from '../../assets/logo.png'
 
 const NavContainer = styled.nav`
   display: flex;
@@ -171,7 +172,7 @@ export default function Nav() {
         <Center>
           <Logo>
             <StyledLink to='/'>
-              <img src='src/assets/logo.png' alt='Logo' />
+              <img src={logoImage} alt='Logo' />
               <span>Catherm</span>
             </StyledLink>
           </Logo>
