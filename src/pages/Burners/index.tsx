@@ -33,7 +33,7 @@ const ImageGrid = styled.div`
   }
 
   @media (max-width: 480px) {
-    padding: 30px 10px;
+    padding: 10px 0px;
   }
 `
 
@@ -55,6 +55,7 @@ const StyledImage = styled.img`
 
   @media (max-width: 480px) {
     border-radius: 6px;
+    max-width: 350px;
   }
 `
 

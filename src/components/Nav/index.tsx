@@ -168,7 +168,7 @@ const Center = styled.div`
   cursor: pointer;
 
   @media (max-width: 480px) {
-    padding: 0 10px;
+    padding: 0;
   }
 `
 
@@ -191,6 +191,7 @@ const ContactBar = styled.div`
     display: flex;
     gap: 15px;
     align-items: center;
+    width: 100%;
 
     span {
       display: flex;

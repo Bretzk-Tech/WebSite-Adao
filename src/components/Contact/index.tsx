@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import logo from '../../assets/logo.png'  // Add this import
+import logo from '../../assets/logo.png' // Add this import
 
 const Container = styled.div`
   display: flex;
@@ -7,13 +7,15 @@ const Container = styled.div`
   justify-content: center;
   min-height: 100vh;
   padding: 2rem 1rem;
+  width: 100%;
+  max-width: 100vw;
 
   @media (max-width: 768px) {
     padding: 1.5rem 0.8rem;
   }
 
   @media (max-width: 480px) {
-    padding: 1rem 0.5rem;
+   padding:0;
     min-height: auto;
   }
 `
