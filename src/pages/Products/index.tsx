@@ -280,7 +280,7 @@ const Pecas: React.FC = () => {
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                Ver Mais
+                Saber Mais
               </Button>
             </Card>
           ))}
