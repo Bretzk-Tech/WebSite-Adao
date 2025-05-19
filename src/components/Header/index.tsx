@@ -11,21 +11,30 @@ import motor07 from '../../assets/motor07.avif'
 import motor08 from '../../assets/motor08.avif'
 import motor09 from '../../assets/motor09.avif'
 import image from '../../assets/image.png'
+import queimadorPainel from '../../assets/queimadorPainel.png'
+import quemadorPainel02 from '../../assets/quemadorPainel02.png'
+import queimadorM01 from '../../assets/queimadorM01.png'
+import queimadorM02 from '../../assets/queimadoresM02.png'
+import queimadorM3 from '../../assets/queimadorM3.png'
 
 const HeaderSection = styled.header`
   background-image: url(${headerBackground});
   color: white;
-  padding: 20px 20px;
+  padding: 20px 0;
+  padding-top: 0;
   text-align: center;
 `
 
-const Title = styled.h1`
-  font-size: 30px !important;
-  font-weight: 700;
-  margin-top: 20px !important;
-  margin-bottom: 40px !important;
-  color: #ecf0f1;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+const Title = styled.h2`
+  color: #ffffff;
+  text-align: center;
+  font-size: 23px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  line-height: 1.5;
+  text-shadow: 2px 2px 4px rgba(30, 30, 30, 0.59);
 `
 
 const ProductGrid = styled.div`
@@ -44,6 +53,22 @@ const ProductImage = styled.img`
   border-radius: 8px;
   background: white;
   padding: 10px;
+`
+
+const FeatureImagesContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+`
+
+const FeatureImage = styled.img`
+  max-width: auto;
+  height: 300px;
+  border-radius: 8px;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 `
 
 const CTABox = styled.div`
@@ -81,6 +106,15 @@ const CTAButton = styled(Link)`
   }
 `
 
+const StylesHeader = styled.div`
+  background-color: #004466;
+  padding: 30px 0;
+  margin-bottom: 30px;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+`
+
 const Header = () => {
   const produtos = [
     motor01,
@@ -97,7 +131,15 @@ const Header = () => {
 
   return (
     <HeaderSection>
-      <Title>Soluções completas em peças para queimadores de biomassa</Title>
+      <StylesHeader>
+        <Title>Soluções completas e peças para queimadores de biomassa</Title>
+      </StylesHeader>
+      <FeatureImagesContainer>
+        <FeatureImage src={queimadorPainel} alt=' Queimador de bio massa' />
+        <FeatureImage src={quemadorPainel02} alt='Queimador de bio massa' />
+        <FeatureImage src={queimadorM02} alt='Queimador de bio massa' />
+        <FeatureImage src={queimadorM3} alt='Queimador de bio massa' />
+      </FeatureImagesContainer>
       <ProductGrid>
         {produtos.map((src, i) => (
           <ProductImage key={i} src={src} alt={`Produto ${i + 1}`} />
@@ -105,7 +147,7 @@ const Header = () => {
       </ProductGrid>
 
       <CTABox>
-        <CTATitle>Explore nosso catálogo especializado!</CTATitle>
+        <CTATitle>Explore nosso catálogo!</CTATitle>
         <CTAText>Entrega rápida para todo o Brasil</CTAText>
         <CTAButton to='/products'>Ver Produtos</CTAButton>
       </CTABox>
