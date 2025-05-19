@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import logo from '../../assets/logo.png'  // Add this import
 
 const Container = styled.div`
   display: flex;
@@ -396,7 +397,7 @@ const Contact = () => {
               </Paragraph>
 
               <Image
-                src='src/assets/logo.png'
+                src={logo}
                 alt='Logo da Catherm Comercial Ltda. com texto em vermelho'
               />
             </TextWrapper>

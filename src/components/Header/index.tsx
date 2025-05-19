@@ -13,9 +13,8 @@ import motor09 from '../../assets/motor09.avif'
 import image from '../../assets/image.png'
 import queimadorPainel from '../../assets/queimadorPainel.png'
 import quemadorPainel02 from '../../assets/quemadorPainel02.png'
-import queimadorM01 from '../../assets/queimadorM01.png'
-import queimadorM02 from '../../assets/queimadoresM02.png'
-import queimadorM3 from '../../assets/queimadorM3.png'
+import queimadores01 from '../../assets/queimadores01.png'
+import queimadores02 from '../../assets/queimadores02.png'
 
 const HeaderSection = styled.header`
   background-image: url(${headerBackground});
@@ -252,8 +251,8 @@ const Header = () => {
       <FeatureImagesContainer>
         <FeatureImage src={queimadorPainel} alt=' Queimador de bio massa' />
         <FeatureImage src={quemadorPainel02} alt='Queimador de bio massa' />
-        <FeatureImage src={queimadorM02} alt='Queimador de bio massa' />
-        <FeatureImage src={queimadorM3} alt='Queimador de bio massa' />
+        <FeatureImage src={queimadores01} alt='Queimador de bio massa' />
+        <FeatureImage src={queimadores02} alt='Queimador de bio massa' />
       </FeatureImagesContainer>
       <ProductGrid>
         {produtos.map((src, i) => (
