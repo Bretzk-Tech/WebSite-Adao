@@ -187,6 +187,27 @@ const ContactBar = styled.div`
     margin-left: 10px;
   }
 
+  .contact-info {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+    span {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      padding: 4px 8px;
+      border-radius: 4px;
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+      svg,
+      img {
+        margin-right: 5px;
+      }
+    }
+  }
+
   .social-icons {
     display: flex;
     gap: 15px;
@@ -215,6 +236,21 @@ const ContactBar = styled.div`
       justify-content: center;
     }
 
+    .contact-info {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      max-width: 90%;
+      margin: 0 auto;
+
+      span {
+        margin: 0;
+        flex: 0 0 auto;
+        font-size: 13px;
+        padding: 5px 10px;
+      }
+    }
+
     div:first-child {
       flex-direction: column;
       gap: 5px;
@@ -225,6 +261,21 @@ const ContactBar = styled.div`
   @media (max-width: 480px) {
     font-size: 12px;
     padding: 8px 0;
+
+    .contact-info {
+      display: grid;
+      grid-template-columns: 1fr;
+      width: 90%;
+      gap: 6px;
+      margin: 0 auto 8px auto;
+
+      span {
+        justify-content: center;
+        padding: 6px 0;
+        width: 100%;
+        text-align: center;
+      }
+    }
 
     .social-icons {
       gap: 10px;
@@ -272,7 +323,7 @@ export default function Nav() {
     <>
       <ContactBar>
         <Center>
-          <div style={{ display: 'flex', gap: '10px', fontSize: '14px' }}>
+          <div className='contact-info'>
             <span>📞 (47) 3378-5990</span>
             <span>📱 (47) 99147-1021</span>
             <span>✉ adaocatherm@tarra.com.br</span>
