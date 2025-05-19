@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
 import { FiMenu, FiX } from 'react-icons/fi'
 import { FaWhatsapp, FaInstagram, FaFacebook } from 'react-icons/fa'
@@ -17,6 +17,14 @@ const NavContainer = styled.nav`
   top: 0;
   z-index: 999;
   font-family: 'Segoe UI', sans-serif;
+
+  @media (max-width: 768px) {
+    padding: 16px 18px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 14px 16px;
+  }
 `
 
 const Logo = styled.div`
@@ -27,12 +35,22 @@ const Logo = styled.div`
     width: 40px;
     height: 50px;
     margin-right: 10px;
+
+    @media (max-width: 480px) {
+      width: 32px;
+      height: 40px;
+      margin-right: 8px;
+    }
   }
 
   span {
     font-size: 20px;
     font-weight: 700;
     color: #222;
+
+    @media (max-width: 480px) {
+      font-size: 18px;
+    }
   }
 `
 
@@ -51,6 +69,10 @@ const MenuToggle = styled.div`
 
   @media (max-width: 768px) {
     display: block;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 22px;
   }
 `
 
@@ -86,15 +108,52 @@ const NavLinks = styled.ul<NavLinksProps>`
 
   @media (max-width: 768px) {
     flex-direction: column;
-    background: #ffffff; // Fundo branco consistente
+    background: #ffffff;
     position: absolute;
     top: 70px;
     right: 0;
-    width: 240px; // Largura ajustada para melhor visualização
+    width: 240px;
     padding: 20px;
-    box-shadow: -2px 4px 12px rgba(0, 0, 0, 0.15); // Sombra mais visível
+    box-shadow: -2px 4px 12px rgba(0, 0, 0, 0.15);
     border-radius: 0 0 8px 8px;
     display: ${props => (props.isOpen ? 'flex' : 'none')};
+    z-index: 1000;
+
+    li {
+      margin: 0 0 15px 0;
+      width: 100%;
+      text-align: center;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        display: block;
+        padding: 12px;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: #f8f9fa;
+        }
+
+        &.active {
+          border-bottom: none;
+          background-color: #ecf0f1;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    top: 65px;
+    width: 200px;
+    padding: 15px;
+
+    li a {
+      font-size: 15px;
+      padding: 10px;
+    }
   }
 `
 
@@ -107,6 +166,10 @@ const Center = styled.div`
   margin: 0 auto;
   padding: 0 20px;
   cursor: pointer;
+
+  @media (max-width: 480px) {
+    padding: 0 10px;
+  }
 `
 
 const ContactBar = styled.div`
@@ -140,12 +203,44 @@ const ContactBar = styled.div`
       }
     }
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+
+    div {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    div:first-child {
+      flex-direction: column;
+      gap: 5px;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+    padding: 8px 0;
+
+    .social-icons {
+      gap: 10px;
+
+      a {
+        font-size: 16px;
+      }
+    }
+  }
 `
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
   const [activeLink, setActiveLink] = useState(location.pathname)
+  const navRef = useRef<HTMLDivElement>(null)
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen)
@@ -155,6 +250,23 @@ export default function Nav() {
     setActiveLink(path)
     setMenuOpen(false)
   }
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        navRef.current &&
+        !navRef.current.contains(event.target as Node) &&
+        menuOpen
+      ) {
+        setMenuOpen(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [menuOpen])
 
   return (
     <>
@@ -194,7 +306,7 @@ export default function Nav() {
         </Center>
       </ContactBar>
       <NavContainer>
-        <Center>
+        <Center ref={navRef}>
           <Logo>
             <StyledLink to='/'>
               <img src={logoImage} alt='Logo' />

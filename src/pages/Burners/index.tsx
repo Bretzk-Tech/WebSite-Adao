@@ -8,6 +8,7 @@ import qm400Turbo from '../../assets/qm400Turbo.png'
 const Container = styled.div`
   background-color: #f0f0f0;
   padding-bottom: 10px;
+  overflow: hidden; /* Prevent horizontal scroll */
 `
 
 const ImageGrid = styled.div`
@@ -19,7 +20,21 @@ const ImageGrid = styled.div`
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  /* border: 1px solid red; */
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media (max-width: 1024px) {
+    gap: 15px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: 40px 15px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 30px 10px;
+  }
 `
 
 const StyledImage = styled.img`
@@ -27,9 +42,19 @@ const StyledImage = styled.img`
   height: auto;
   border-radius: 8px;
   transition: transform 0.3s ease;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   &:hover {
     transform: scale(1.05);
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    border-radius: 6px;
   }
 `
 
@@ -50,6 +75,12 @@ const Title = styled.h2`
   margin: 0;
   line-height: 1.5;
   text-shadow: 2px 2px 4px rgba(30, 30, 30, 0.59);
+  padding: 0 15px;
+
+  @media (max-width: 480px) {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
 `
 
 const Description = styled.div`
@@ -64,6 +95,12 @@ const Description = styled.div`
   margin-bottom: 60px;
   position: relative;
   z-index: 1;
+
+  @media (max-width: 768px) {
+    padding: 50px 15px;
+    margin: 0 15px 40px;
+    border-radius: 8px;
+  }
 
   h2 {
     font-size: 32px;
@@ -82,6 +119,21 @@ const Description = styled.div`
       width: 80px;
       height: 3px;
       background-color: #004466;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 26px;
+      margin-bottom: 30px;
+
+      &:after {
+        width: 60px;
+        height: 2px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      font-size: 22px;
+      margin-bottom: 25px;
     }
   }
 
@@ -103,20 +155,16 @@ const Description = styled.div`
     &:hover {
       color: #333;
     }
-  }
 
-  @media (max-width: 768px) {
-    padding: 60px 15px;
-    margin-top: -20px;
-
-    h2 {
-      font-size: 26px;
-      margin-bottom: 30px;
-    }
-
-    p {
+    @media (max-width: 768px) {
       font-size: 16px;
       line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 15px;
+      text-align: left;
     }
   }
 `

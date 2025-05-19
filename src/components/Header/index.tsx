@@ -23,6 +23,7 @@ const HeaderSection = styled.header`
   padding: 20px 0;
   padding-top: 0;
   text-align: center;
+  overflow: hidden; /* Prevent horizontal scroll */
 `
 
 const Title = styled.h2`
@@ -35,6 +36,12 @@ const Title = styled.h2`
   margin: 0;
   line-height: 1.5;
   text-shadow: 2px 2px 4px rgba(30, 30, 30, 0.59);
+  padding: 0 15px;
+
+  @media (max-width: 480px) {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
 `
 
 const ProductGrid = styled.div`
@@ -44,6 +51,24 @@ const ProductGrid = styled.div`
   justify-items: center;
   max-width: 1000px;
   margin: 0 auto 60px auto;
+  padding: 0 20px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(3, minmax(120px, 1fr));
+    gap: 15px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0 15px;
+  }
 `
 
 const ProductImage = styled.img`
@@ -53,6 +78,21 @@ const ProductImage = styled.img`
   border-radius: 8px;
   background: white;
   padding: 10px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    padding: 8px;
+  }
+
+  @media (max-width: 480px) {
+    border-radius: 6px;
+    padding: 5px;
+  }
 `
 
 const FeatureImagesContainer = styled.div`
@@ -60,6 +100,24 @@ const FeatureImagesContainer = styled.div`
   justify-content: center;
   gap: 20px;
   margin-bottom: 40px;
+  padding: 0 20px;
+  flex-wrap: wrap;
+
+  @media (max-width: 1024px) {
+    gap: 15px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 10px;
+    gap: 10px;
+  }
 `
 
 const FeatureImage = styled.img`
@@ -69,6 +127,22 @@ const FeatureImage = styled.img`
   background: white;
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 1024px) {
+    height: 250px;
+  }
+
+  @media (max-width: 768px) {
+    height: auto;
+    max-width: 90%;
+    max-height: 200px;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 95%;
+    padding: 5px;
+    border-radius: 6px;
+  }
 `
 
 const CTABox = styled.div`
@@ -77,17 +151,38 @@ const CTABox = styled.div`
   border-radius: 12px;
   max-width: 600px;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    max-width: 90%;
+    padding: 30px 15px;
+    border-radius: 10px;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 95%;
+    padding: 25px 15px;
+    border-radius: 8px;
+  }
 `
 
 const CTATitle = styled.h2`
   font-size: 1.5rem;
   margin-bottom: 10px;
+
+  @media (max-width: 480px) {
+    font-size: 1.3rem;
+  }
 `
 
 const CTAText = styled.p`
   font-size: 1rem;
   color: #ccc !important;
   margin-bottom: 20px;
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
 `
 
 const CTAButton = styled(Link)`
@@ -98,11 +193,21 @@ const CTAButton = styled(Link)`
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 
   &:hover {
     background-color: #34495e;
     transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-size: 0.9rem;
   }
 `
 
@@ -113,6 +218,16 @@ const StylesHeader = styled.div`
   background-size: cover;
   background-position: center;
   width: 100%;
+
+  @media (max-width: 768px) {
+    padding: 25px 0;
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 20px 0;
+    margin-bottom: 20px;
+  }
 `
 
 const Header = () => {

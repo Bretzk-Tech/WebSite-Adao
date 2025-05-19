@@ -25,6 +25,12 @@ const Title = styled.h2`
   margin: 0;
   line-height: 1.5;
   text-shadow: 2px 2px 4px rgba(30, 30, 30, 0.59);
+  padding: 0 15px;
+
+  @media (max-width: 480px) {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
 `
 
 const CardsWrapper = styled.div`
@@ -40,37 +46,76 @@ const Center = styled.div`
   display: grid;
   grid-template-columns: repeat(3, minmax(160px, 1fr));
   justify-items: center;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 30px 20px;
+    gap: 30px;
+  }
 `
 
 const Card = styled.div`
   width: 280px;
   border: 1px solid #dcdcdc;
-  border-radius: 8px; /* Adicionado bordas arredondadas */
+  border-radius: 8px;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #ffffff; /* Fundo branco para contraste */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adicionado sombra */
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 100%;
+  }
 `
 
 const CardImage = styled.img`
   max-width: 100%;
-  height: 180px; /* Ajustado para uniformidade */
+  height: 180px;
   object-fit: contain;
-  padding: 00px;
+  padding: 0px;
+
+  @media (max-width: 480px) {
+    height: 150px;
+  }
 `
 
 const CardTitle = styled.h3`
-  font-size: 20px; /* Aumentado para maior destaque */
-  color: #004466; /* Ajustado para combinar com a paleta */
+  font-size: 20px;
+  color: #004466;
   margin: 16px 0 8px;
+  padding: 0 10px;
+
+  @media (max-width: 480px) {
+    font-size: 18px;
+  }
 `
 
 const CardDescription = styled.p`
   font-size: 14px;
-  color: #666666; /* Cor ajustada para melhor contraste */
+  color: #666666;
   margin: 0 16px 16px;
+
+  @media (max-width: 480px) {
+    font-size: 13px;
+    margin: 0 12px 12px;
+  }
 `
 
 const Button = styled.button`
@@ -84,9 +129,20 @@ const Button = styled.button`
   padding: 10px;
   margin: 0 auto;
   margin-bottom: 10px;
+  transition: background-color 0.3s, transform 0.2s;
 
   &:hover {
-    background-color: #00334d; /* Cor de hover ajustada */
+    background-color: #00334d;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  @media (max-width: 480px) {
+    width: 80%;
+    font-size: 15px;
+    padding: 12px;
   }
 `
 
@@ -96,13 +152,22 @@ const Description = styled.div`
   align-items: center;
   padding: 70px 0;
 
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
+
   h2 {
     font-size: 24px;
     color: #00334d;
     margin-bottom: 30px;
-    /* text-transform: uppercase; */
     letter-spacing: 1px;
     text-align: center;
+    padding: 0 15px;
+
+    @media (max-width: 480px) {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
   }
 
   p {
@@ -110,19 +175,34 @@ const Description = styled.div`
     color: #444444;
     line-height: 1.8;
     margin: 0 auto;
-    max-width: 650px; /* Limite de largura para foco no texto */
-    text-align: justify; /* Justificado para aparência mais profissional */
+    max-width: 650px;
+    text-align: justify;
+    padding: 0 20px;
+
+    @media (max-width: 480px) {
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: left;
+    }
   }
 
   div:first-child {
-    flex: 1.5; /* Maior proporção para o texto */
+    flex: 1.5;
   }
 
   div:last-child {
-    flex: 1; /* Proporção ajustada para a imagem */
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  section {
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 30px;
+      padding: 0 15px;
+    }
   }
 `
 
@@ -130,6 +210,11 @@ const Image = styled.img`
   width: 100%;
   max-width: 150px;
   height: auto;
+
+  @media (max-width: 768px) {
+    max-width: 120px;
+    margin: 10px 0;
+  }
 `
 
 const Pecas: React.FC = () => {
