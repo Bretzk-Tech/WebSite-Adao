@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const { pathname } = useLocation()
 
   useEffect(() => {
     // Scroll to top with smooth behavior
@@ -10,10 +10,10 @@ const ScrollToTop = () => {
       top: 0,
       left: 0,
       behavior: 'smooth'
-    });
-  }, [pathname]);
+    })
+  }, [pathname])
 
-  return null; // This component doesn't render anything
-};
+  return null // This component doesn't render anything
+}
 
-export default ScrollToTop;
+export default ScrollToTop

@@ -118,7 +118,7 @@ const CardDescription = styled.p`
   }
 `
 
-const Button = styled.button`
+const Button = styled.a`
   background-color: #004466;
   color: #ffffff;
   border: none;
@@ -130,6 +130,9 @@ const Button = styled.button`
   margin: 0 auto;
   margin-bottom: 10px;
   transition: background-color 0.3s, transform 0.2s;
+  text-align: center;
+  text-decoration: none;
+  display: block;
 
   &:hover {
     background-color: #00334d;
@@ -251,6 +254,13 @@ const Pecas: React.FC = () => {
     }
   ]
 
+  // Function to create WhatsApp URL with product information
+  const createWhatsAppLink = (productName: string) => {
+    const phoneNumber = '5547991471021' // Your WhatsApp number
+    const message = `Olá! Gostaria de saber mais sobre ${productName}.`
+    return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+  }
+
   return (
     <>
       <Header>
@@ -265,7 +275,13 @@ const Pecas: React.FC = () => {
               {peca.description && (
                 <CardDescription>{peca.description}</CardDescription>
               )}
-              <Button>Ver Mais</Button>
+              <Button
+                href={createWhatsAppLink(peca.title)}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Ver Mais
+              </Button>
             </Card>
           ))}
         </Center>
